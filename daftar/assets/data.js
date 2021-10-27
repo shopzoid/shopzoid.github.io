@@ -25,10 +25,11 @@ var config = {
     // Get values
     var name = getInputVal('name');
     var email = getInputVal('email');
+    var phone = getInputVal('phone');
     var instagram = getInputVal('instagram');
   
     // Save message
-    saveMessage(name, email, instagram);
+    saveMessage(name, email, phone, instagram);
   
     // Show alert
     document.querySelector('.alert').style.display = 'block';
@@ -48,11 +49,12 @@ var config = {
   }
   
   // Save message to firebase
-  function saveMessage(name, email, instagram) {
+  function saveMessage(name, email, phone, instagram) {
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
       name: name,
       email: email,
+      phone: phone,
       instagram: instagram,
     });
   }
