@@ -675,7 +675,20 @@
        </div>
        <!-- color-customizer END -->
        <script>
-          firebase.auth().onAuthStateChanged(function (user) {
+          // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAMNiKJU39uRHcC8MNc6z3j-BzLuDIEg1A",
+    authDomain: "shopzoid-chatapp.firebaseapp.com",
+    databaseURL: "https://shopzoid-chatapp-default-rtdb.firebaseio.com",
+    projectId: "shopzoid-chatapp",
+    storageBucket: "shopzoid-chatapp.appspot.com",
+    messagingSenderId: "332834378563",
+    appId: "1:332834378563:web:4aa76050cb8c9d5c9a95f6",
+    measurementId: "G-RP40YR986V",
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
           document.getElementById("userDetails").innerHTML = `
                 <p> <img src="${user.photoURL}" style="width:100px; display: block;" margin-left: auto; margin-right: auto; margin-right: auto; text-align: center;>
@@ -684,7 +697,7 @@
                     | <a style="color:blue;cursor: pointer;" onClick="logout()">Logout as a ${user.displayName}</a></p>
             `;
         }   else {
-          window.location = "login.html";
+          window.location = "test.html";
         }
       });
 
@@ -693,7 +706,7 @@
           .auth()
           .signOut()
           .then(function () {
-            window.location = "login.html";
+            window.location = "test.html";
           })
           .catch(function (error) {
             console.log(error);
