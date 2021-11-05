@@ -667,12 +667,44 @@
                    <li class="color-19" data-style="iq-color-19"></li>
                    <li class="color-20" data-style="iq-color-20"></li>
                </ul>
+               <div id="userDetails"></div>
                <!--Button--
                <a target="_blank" class="btn btn-primary d-block mt-3" href="#">Purchase Now</a>
                <!--Button-->
            </div>
        </div>
        <!-- color-customizer END -->
+       <script>
+          firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          document.getElementById("userDetails").innerHTML = `
+                <p> <img src="${user.photoURL}" style="width:100px; display: block;" margin-left: auto; margin-right: auto; margin-right: auto; text-align: center;>
+                    <br /> Your Name : ${user.displayName}
+                    <br /> Your Email : ${user.email}
+                    | <a style="color:blue;cursor: pointer;" onClick="logout()">Logout as a ${user.displayName}</a></p>
+            `;
+        }   else {
+          window.location = "login.html";
+        }
+      });
+
+      function logout() {
+        firebase
+          .auth()
+          .signOut()
+          .then(function () {
+            window.location = "login.html";
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+      showData();
+       </script>
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></scrip>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="../assets-1/js/jquery.min.js"></script>

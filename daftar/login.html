@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5 text-center">
+          <h1>Contact Dir</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+            distinctio consequatur ipsam praesentium aspernatur unde, aperiam
+            molestiae harum voluptates deleniti, illo id nobis asperiores
+            aliquam sapiente veritatis repellat delectus alias.
+          </p>
+          <br />
+          <button class="btn btn-primary" onClick="loginUser()">
+            Login With Google
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAMNiKJU39uRHcC8MNc6z3j-BzLuDIEg1A",
+    authDomain: "shopzoid-chatapp.firebaseapp.com",
+    databaseURL: "https://shopzoid-chatapp-default-rtdb.firebaseio.com",
+    projectId: "shopzoid-chatapp",
+    storageBucket: "shopzoid-chatapp.appspot.com",
+    messagingSenderId: "332834378563",
+    appId: "1:332834378563:web:4aa76050cb8c9d5c9a95f6",
+    measurementId: "G-RP40YR986V",
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      function loginUser() {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase
+          .auth()
+          .signInWithPopup(provider)
+          .then(function (result) {
+            window.location = "profile.html";
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          window.location = "profile.html";
+        } else {
+        }
+      });
+    </script>
+  </body>
+</html>
