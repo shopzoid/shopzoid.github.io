@@ -554,7 +554,7 @@
      <div class="input-group">
        <!--Nama-->
        <label for="username" class="label">Apa Nama TokoMu?</label>
-       <input data-title="Nama Tokomu" data-intro="Masukkan Nama Tokomu Disini" id="name" name="name"  placeholder="Nama" type="text" class="input" required>
+       <input id="name" name="name"  placeholder="Nama" type="text" class="input" required>
        <span class="error-message" ></span>
        <svg class="icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -568,7 +568,7 @@
      <!--Email-->
      <div class="input-group">
      <label for="email" class="label">Email Pribadi</label>
-     <input data-title="Email" data-intro="Masukkan Email Valid Kamu Untuk Konfirmasi Berikutnya" id="email" name="email"  placeholder="Your Email" type="email" class="input" required>
+     <input id="email" name="email"  placeholder="Your Email" type="email" class="input" required>
      <span class="error-message"></span>
      <svg class="icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -607,6 +607,29 @@
          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
        </svg>
        </div>
+
+       <!--Input-->
+       <select id="kategori" name="kategori" style="
+       display: block;
+       width: 100%;
+       height: 50px;
+       margin: 0.5rem 0 1rem 0;
+       padding: 0.5rem;
+       font-size: 1rem;
+       border: 0;
+       border-radius: 0.125rem 0.25rem;
+       background-color: hsl(222, 20%, 95%);">
+                              <option value="" hidden>Kategori </option>
+                              <option value="Pakaian">Pakaian</option>
+                              <option value="Perawatan & Kecantikan">Perawatan & Kecantikan</option>
+                              <option value="Kesehatan">Kesehatan</option>
+                              <option value="Elektronik">Elektronik</option>
+                              <option value="Makanan & Minuman">Makanan & Minuman</option>
+                              <option value="Gaming">Gaming</option>
+                              <option value="Buku & alat Tulis">Buku & alat Tulis</option>
+                           </select>
+                           <br>
+                           <!--Input-->
 
  <!-- lompakai-->
  <button type="submit" class="button">Selanjutnya</button>
