@@ -20,7 +20,8 @@ var config = {
   // Submit form
   function submitForm(e) {
     e.preventDefault();
-    setTimeout(function(){window.location.href = "https://shopzoid.page.link/qLo3" ;}, 3000);
+    alert("Setelah Daftar Silahkan Download Aplikasi Untuk Melanjutkan")
+    setTimeout(function(){window.location.href = "https://shopzoid.github.io/links/download-apk/index.html" ;}, 3000);
   
     // Get values
     var name = getInputVal('name');
