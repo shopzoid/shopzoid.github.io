@@ -18,6 +18,7 @@
       <!-- Responsive CSS -->
       <link rel="stylesheet" href="../assets-1/css/responsive.css">
       <link rel="stylesheet" href="./assets/style.css">
+      <link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet"> 
    </head>
    <body class="sidebar-main-active right-column-fixed">
       <!-- loader Start --
@@ -553,8 +554,8 @@
      <div class="input-group">
        <!--Nama-->
        <label for="username" class="label">Apa Nama TokoMu?</label>
-       <input id="name" name="name"  placeholder="Nama" type="text" class="input" required>
-       <span class="error-message"></span>
+       <input data-title="Nama Tokomu" data-intro="Masukkan Nama Tokomu Disini" id="name" name="name"  placeholder="Nama" type="text" class="input" required>
+       <span class="error-message" ></span>
        <svg class="icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
        </svg>
@@ -567,7 +568,7 @@
      <!--Email-->
      <div class="input-group">
      <label for="email" class="label">Email Pribadi</label>
-     <input id="email" name="email"  placeholder="Your Email" type="email" class="input" required>
+     <input data-title="Email" data-intro="Masukkan Email Valid Kamu Untuk Konfirmasi Berikutnya/" id="email" name="email"  placeholder="Your Email" type="email" class="input" required>
      <span class="error-message"></span>
      <svg class="icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -724,6 +725,14 @@
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 <script  src="./assets/script.js"></script>
 <script  src="./assets/data.js"></script>
+
+
+<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+<script>
+    introJs().onbeforeexit(function () {
+  return confirm("Are you sure?");
+}).start()
+</script>
    </body>
 
 <!-- Mirrored from iqonic.design/themes/booksto/html/ui-badges.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Mar 2021 03:55:23 GMT -->
