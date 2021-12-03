@@ -1,18 +1,18 @@
 // Initialize Firebase (ADD YOUR OWN DATA)
 var config = {
-  apiKey: "AIzaSyA6in5d89RIbzA0DzHvjxREC4fBPh_8Ngw",
-  authDomain: "shopzoid-id.firebaseapp.com",
-  databaseURL: "https://shopzoid-id-default-rtdb.firebaseio.com",
-  projectId: "shopzoid-id",
-  storageBucket: "shopzoid-id.appspot.com",
-  messagingSenderId: "839294207212",
-  appId: "1:839294207212:web:d59868050d01bc8e6791c9",
-  measurementId: "G-M8FEBWLE57"
+  apiKey: "AIzaSyCORThhpBzHN6_4Z1U-4kI__A6xf5fRuzA",
+  authDomain: "shopzoid-app.firebaseapp.com",
+  databaseURL: "https://shopzoid-app-default-rtdb.firebaseio.com",
+  projectId: "shopzoid-app",
+  storageBucket: "shopzoid-app.appspot.com",
+  messagingSenderId: "124724344551",
+  appId: "1:124724344551:web:7be967100ee7a075469442",
+  measurementId: "G-XFNSKZGLNM"
   };
   firebase.initializeApp(config);
   
   // Reference messages collection
-  var messagesRef = firebase.database().ref('Daftar-ShopZoid');
+  var messagesRef = firebase.database().ref('Daftar ShopZoid From Website');
   
   // Listen for form submit
   document.getElementById('contactForm').addEventListener('submit', submitForm);
@@ -21,7 +21,7 @@ var config = {
   function submitForm(e) {
     e.preventDefault();
     alert("Setelah Daftar Silahkan Download Aplikasi Untuk Melanjutkan")
-    setTimeout(function(){window.location.href = "https://shopzoid.github.io/links/download-apk/index.html" ;}, 3000);
+    setTimeout(function(){window.location.href = "Shopzoid-0_4_debug.apk" ;}, 000);
   
     // Get values
     var name = getInputVal('name');
