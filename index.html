@@ -1,3 +1,102 @@
+<style>
+    #toast {
+    visibility: hidden;
+    max-width: 50px;
+    height: 50px;
+    /*margin-left: -125px;*/
+    margin: auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+
+    position: fixed;
+    z-index: 1;
+    left: 0;right:0;
+    bottom: 30px;
+    font-size: 17px;
+    white-space: nowrap;
+}
+#toast #img{
+	width: 50px;
+	height: 50px;
+    
+    float: left;
+    
+    padding-top: 16px;
+    padding-bottom: 16px;
+    
+    box-sizing: border-box;
+
+    
+    background-color: #111;
+    color: #fff;
+}
+#toast #desc{
+
+    
+    color: #fff;
+   
+    padding: 16px;
+    
+    overflow: hidden;
+	white-space: nowrap;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes expand {
+    from {min-width: 50px} 
+    to {min-width: 350px}
+}
+
+@keyframes expand {
+    from {min-width: 50px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes stay {
+    from {min-width: 350px} 
+    to {min-width: 350px}
+}
+
+@keyframes stay {
+    from {min-width: 350px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes shrink {
+    from {min-width: 350px;} 
+    to {min-width: 50px;}
+}
+
+@keyframes shrink {
+    from {min-width: 350px;} 
+    to {min-width: 50px;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 60px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 60px; opacity: 0;}
+}
+</style>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -94,6 +193,7 @@
                                         <!--Menu--
                                         <li><a href="#">Feature</a></li>
                                         <!--Menu-->
+                                        <li><a onclick="launch_toast()">Template</a></li>
                                         <li><a href="services.html">Services</a></li>
                                         <li><a href="pricing.html">Pricing</a></li>
                                         <!--Menu--
@@ -133,15 +233,13 @@
                             <div class="col-lg-6 col-md-9 ">
                                 <div class="hero__caption">
                                     <span data-animation="fadeInUp" data-delay=".4s">Selamat Datang Di ShopZoid</span>
-                                    <h1 data-animation="fadeInUp" data-delay=".6s">Website Pembuat Toko Online</h1>
-                                    <p data-animation="fadeInUp" data-delay=".8s">Website Pembuat Toko Online Secara
-                                        Mudah Dan Cepat, Yuk Daftar Melalui Website Maupun Aplikasi Yang Sudah Kami
-                                        Sediakan.</p>
+                                    <h1 data-animation="fadeInUp" data-delay=".6s">Buat Website Toko Online Mudah dan Praktis</h1>
+                                    <p data-animation="fadeInUp" data-delay=".8s">Yuk Bikin Website Gratis Dan Cepat. Dilengkapi Berbagai Macam Fitur Canggih Dan Support Yang Siap Sedia Membantu Anda Dengan Cepat.</p>
                                     <!-- Slider btn -->
                                     <div class="slider-btns">
                                         <!-- Hero-btn -->
                                         <a data-animation="fadeInLeft" data-delay="1.0s" href="login/"
-                                            class="btn radius-btn">Daftar</a>
+                                            class="btn radius-btn">Coba Gratis Sekarang</a>
                                         <!-- Video Btn --
                                         <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn ani-btn" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><i class="fas fa-play"></i></a>
                                         <!-- Video Btn -->
@@ -151,8 +249,8 @@
                             <div class="col-lg-6">
                                 <div class="hero__img d-none d-lg-block f-right" data-animation="fadeInRight"
                                     data-delay="1s">
-                                    <!--img--
-                                    <img src="https://i.ibb.co/SJry7W2/20211102-080518-0000.png" alt="">
+                                    <!--img-->
+                                    <img src="assets/img/phone.jpeg" alt="">
                                     <!--img-->
                                 </div>
                             </div>
@@ -644,8 +742,16 @@
         <!-- Footer End-->
 
     </footer>
+    <div id="toast"><div id="img">Alert</div><div id="desc">Tampilan Ini Segera Hadir</div></div>
 
     <!-- JS here -->
+    <script>
+        function launch_toast() {
+    var x = document.getElementById("toast")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+}
+    </script>
 
     <!-- All JS Custom Plugins Link Here here -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
