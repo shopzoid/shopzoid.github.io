@@ -5317,7 +5317,7 @@ input[type=submit].btn-block {
 	z-index: 3;
 	color: #fff;
 	background-color: #50b5ff;
-	border-color: #50b5ff
+	border-color: #50b5ff;
 }
 
 .page-item.disabled .page-link {
@@ -5325,29 +5325,29 @@ input[type=submit].btn-block {
 	pointer-events: none;
 	cursor: auto;
 	background-color: #fff;
-	border-color: #50b5ff
+	border-color: #50b5ff;
 }
 
 .pagination-lg .page-link {
 	padding: .75rem 1.5rem;
 	font-size: 1.25rem;
-	line-height: 1.5
+	line-height: 1.5;
 }
 
 .pagination-lg .page-item:first-child .page-link {
 	border-top-left-radius: .3rem;
-	border-bottom-left-radius: .3rem
+	border-bottom-left-radius: .3rem;
 }
 
 .pagination-lg .page-item:last-child .page-link {
 	border-top-right-radius: .3rem;
-	border-bottom-right-radius: .3rem
+	border-bottom-right-radius: .3rem;
 }
 
 .pagination-sm .page-link {
 	padding: .25rem .5rem;
 	font-size: .875rem;
-	line-height: 1.5
+	line-height: 1.5;
 }
 
 .pagination-sm .page-item:first-child .page-link {
