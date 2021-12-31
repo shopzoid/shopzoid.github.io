@@ -30,7 +30,17 @@
 
     <!--Google Ads-->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9487367731127238"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function () {
+            OneSignal.init({
+                appId: "03e1776d-9a9e-4bd0-9026-81cdb37f5d62",
+            });
+        });
+    </script>
 
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -67,7 +77,8 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="https://i.ibb.co/F4HQdMZ/Logo-Maker-25102021-181503.jpg" alt="" style="pointer-events: none;">
+                    <img src="https://i.ibb.co/F4HQdMZ/Logo-Maker-25102021-181503.jpg" alt=""
+                        style="pointer-events: none;">
                 </div>
             </div>
         </div>
@@ -83,7 +94,8 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo-shopzoid.png" alt="" style="pointer-events: none;"></a>
+                                <a href="index.html"><img src="assets/img/logo/logo-shopzoid.png" alt=""
+                                        style="pointer-events: none;"></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -136,16 +148,19 @@
                             <div class="col-lg-6 col-md-9 ">
                                 <div class="hero__caption">
                                     <span data-animation="fadeInUp" data-delay=".4s">Selamat Datang Di ShopZoid</span>
-                                    <h1 data-animation="fadeInUp" data-delay=".6s">Buat Website Toko Online Mudah dan Praktis</h1>
-                                    <p data-animation="fadeInUp" data-delay=".8s">Yuk Bikin Website Gratis Dan Cepat. Dilengkapi Berbagai Macam Fitur Canggih Dan Support Yang Siap Sedia Membantu Anda Dengan Cepat.</p>
+                                    <h1 data-animation="fadeInUp" data-delay=".6s">Buat Website Toko Online Mudah dan
+                                        Praktis</h1>
+                                    <p data-animation="fadeInUp" data-delay=".8s">Yuk Bikin Website Gratis Dan Cepat.
+                                        Dilengkapi Berbagai Macam Fitur Canggih Dan Support Yang Siap Sedia Membantu
+                                        Anda Dengan Cepat.</p>
                                     <!-- Slider btn -->
                                     <div class="slider-btns">
                                         <!-- Hero-btn -->
                                         <a data-animation="fadeInLeft" data-delay="1.0s" href="login/"
                                             class="btn radius-btn">Coba Gratis Sekarang</a>
                                         <br><br>
-                                        <a data-animation="fadeInRight" data-delay="1.0s" href="Shopzoid-0_4_debug.apk" 
-                                        class="btn radius-btn">Download Apk</a>
+                                        <a data-animation="fadeInRight" data-delay="1.0s" href="Shopzoid-0_4_debug.apk"
+                                            class="btn radius-btn">Download Apk</a>
                                         <!-- Video Btn --
                                         <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn ani-btn" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><i class="fas fa-play"></i></a>
                                         <!-- Video Btn -->
@@ -608,8 +623,7 @@
                                     <!-- Form -->
                                     <div class="footer-form">
                                         <div id="mc_embed_signup">
-                                            <form target="_blank"
-                                                method="get" class="subscribe_form relative mail_part"
+                                            <form target="_blank" method="get" class="subscribe_form relative mail_part"
                                                 novalidate="true">
                                                 <input type="email" name="EMAIL" id="newsletter-form-email"
                                                     placeholder=" Email Address " class="placeholder hide-on-focus"
@@ -651,112 +665,178 @@
 
     <style>
         #toast {
-        visibility: hidden;
-        max-width: 50px;
-        height: 50px;
-        /*margin-left: -125px;*/
-        margin: auto;
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        border-radius: 2px;
-    
-        position: fixed;
-        z-index: 1;
-        left: 0;right:0;
-        bottom: 30px;
-        font-size: 17px;
-        white-space: nowrap;
-    }
-    #toast #img{
-        width: 50px;
-        height: 50px;
-        
-        float: left;
-        
-        padding-top: 16px;
-        padding-bottom: 16px;
-        
-        box-sizing: border-box;
-    
-        
-        background-color: #111;
-        color: #fff;
-    }
-    #toast #desc{
-    
-        
-        color: #fff;
-       
-        padding: 16px;
-        
-        overflow: hidden;
-        white-space: nowrap;
-    }
-    
-    #toast.show {
-        visibility: visible;
-        -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
-        animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
-    }
-    
-    @-webkit-keyframes fadein {
-        from {bottom: 0; opacity: 0;} 
-        to {bottom: 30px; opacity: 1;}
-    }
-    
-    @keyframes fadein {
-        from {bottom: 0; opacity: 0;}
-        to {bottom: 30px; opacity: 1;}
-    }
-    
-    @-webkit-keyframes expand {
-        from {min-width: 50px} 
-        to {min-width: 350px}
-    }
-    
-    @keyframes expand {
-        from {min-width: 50px}
-        to {min-width: 350px}
-    }
-    @-webkit-keyframes stay {
-        from {min-width: 350px} 
-        to {min-width: 350px}
-    }
-    
-    @keyframes stay {
-        from {min-width: 350px}
-        to {min-width: 350px}
-    }
-    @-webkit-keyframes shrink {
-        from {min-width: 350px;} 
-        to {min-width: 50px;}
-    }
-    
-    @keyframes shrink {
-        from {min-width: 350px;} 
-        to {min-width: 50px;}
-    }
-    
-    @-webkit-keyframes fadeout {
-        from {bottom: 30px; opacity: 1;} 
-        to {bottom: 60px; opacity: 0;}
-    }
-    
-    @keyframes fadeout {
-        from {bottom: 30px; opacity: 1;}
-        to {bottom: 60px; opacity: 0;}
-    }
+            visibility: hidden;
+            max-width: 50px;
+            height: 50px;
+            /*margin-left: -125px;*/
+            margin: auto;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+            font-size: 17px;
+            white-space: nowrap;
+        }
+
+        #toast #img {
+            width: 50px;
+            height: 50px;
+
+            float: left;
+
+            padding-top: 16px;
+            padding-bottom: 16px;
+
+            box-sizing: border-box;
+
+
+            background-color: #111;
+            color: #fff;
+        }
+
+        #toast #desc {
+
+
+            color: #fff;
+
+            padding: 16px;
+
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        #toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes expand {
+            from {
+                min-width: 50px
+            }
+
+            to {
+                min-width: 350px
+            }
+        }
+
+        @keyframes expand {
+            from {
+                min-width: 50px
+            }
+
+            to {
+                min-width: 350px
+            }
+        }
+
+        @-webkit-keyframes stay {
+            from {
+                min-width: 350px
+            }
+
+            to {
+                min-width: 350px
+            }
+        }
+
+        @keyframes stay {
+            from {
+                min-width: 350px
+            }
+
+            to {
+                min-width: 350px
+            }
+        }
+
+        @-webkit-keyframes shrink {
+            from {
+                min-width: 350px;
+            }
+
+            to {
+                min-width: 50px;
+            }
+        }
+
+        @keyframes shrink {
+            from {
+                min-width: 350px;
+            }
+
+            to {
+                min-width: 50px;
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 60px;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 60px;
+                opacity: 0;
+            }
+        }
     </style>
-    <div id="toast"><div id="img">Alert</div><div id="desc">Tampilan Ini Segera Hadir</div></div>
+    <div id="toast">
+        <div id="img">Alert</div>
+        <div id="desc">Tampilan Ini Segera Hadir</div>
+    </div>
 
     <!-- JS here -->
     <script>
         function launch_toast() {
-    var x = document.getElementById("toast")
-    x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
-}
+            var x = document.getElementById("toast")
+            x.className = "show";
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 5000);
+        }
     </script>
 
     <!-- All JS Custom Plugins Link Here here -->
